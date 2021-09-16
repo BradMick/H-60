@@ -1,5 +1,6 @@
 class CfgAmmo {
   class M_Scalpel_AT;
+  class B_30mm_MP_Tracer_Green;
   class ACE_Hellfire_AGM114K: M_Scalpel_AT {class ace_missileguidance;};
   class ACE_Hellfire_AGM114L: M_Scalpel_AT {class ace_missileguidance;};
   class ACE_Hellfire_AGM114N: M_Scalpel_AT {class ace_missileguidance;};
@@ -26,5 +27,24 @@ class CfgAmmo {
     class ace_missileguidance: ace_missileguidance {
       enabled = 1; // Missile Guidance must be explicitly enabled
     };
+  };
+  class vtx_300Rnd_20mm_shells_hei : B_30mm_MP_Tracer_Green {
+    explosive = 1;
+    hit = 20;
+    indirectHit = 60;
+    indirectHitRange = 2;
+    explosionEffects = "ExploAmmoExplosion";
+    deflecting = -1;
+    
+  };
+  class vtx_300Rnd_20mm_shells_ap : vtx_300Rnd_20mm_shells_hei {
+    caliber=4.4;
+    explosive = 0.1;
+    hit = 160;
+    indirectHit = 60;
+    indirectHitRange = 2;
+    explosionEffects = "ExploAmmoExplosion";
+    deflecting = 10;
+    
   };
 };

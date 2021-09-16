@@ -2,7 +2,7 @@ class TransportPylonsComponent {
     uiPicture = "z\vtx\addons\MH60M\Data\UI\vtx_mh60m_dap_3den_ca.paa";
     class Pylons {
         class pylons1 {
-            attachment = "VTX_M230_Chaingun_L";
+            attachment = "VTX_M230_Chaingun_L_HEI";
             priority = 5;
             hardpoints[] = {"O_SKYFIRE", "DAR", "DAGR", "B_SHIEKER", "RHS_HP_LONGBOW_RACK", "RHS_HP_FFAR_ARMY", "RHS_HP_MELB", "RHS_HP_MELB_L", "CUP_NATO_HELO_UH60", "VTX_ST_L"};
             UIposition[] = {0.59, 0.41};

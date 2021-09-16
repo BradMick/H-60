@@ -15,12 +15,12 @@ class cfgWeapons {
     class autocannon_30mm_RCWS: autocannon_Base_F {
       class player;
     };
-    class vtx_chaingun: autocannon_30mm_RCWS {
+    class vtx_chaingun_hei: autocannon_30mm_RCWS {
       displayName = "M230 Chaingun";
-      displayNameShort = "M230";
-      magazines[] = {"VTX_M230_Chaingun_L", "VTX_M230_Chaingun_R"};
+      displayNameShort = "M230 HEI";
+      magazines[] = {"VTX_M230_Chaingun_L_HEI", "VTX_M230_Chaingun_R_HEI"};
       class player: player {
-        displayName = "M230";
+        displayName = "M230 HEI";
       };
       class gunParticles
       {
@@ -45,4 +45,12 @@ class cfgWeapons {
 	class missiles_DAGR: RocketPods {
     magazines[] += {"VTX_PylonRack_M261_DAGR"};
   };
+    class vtx_chaingun_ap: vtx_chaingun_hei {
+      displayName = "M230 Chaingun";
+      displayNameShort = "M230 AP";
+      magazines[] = {"VTX_M230_Chaingun_L_AP", "VTX_M230_Chaingun_R_AP"};
+      class player: player {
+        displayName = "M230 AP";
+      };
+    };
 };
