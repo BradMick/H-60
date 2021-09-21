@@ -15,9 +15,9 @@ class cfgWeapons {
     class autocannon_30mm_RCWS: autocannon_Base_F {
       class player;
     };
-    class vtx_chaingun_hei: autocannon_30mm_RCWS {
+    class vtx_chaingun_hedp: autocannon_30mm_RCWS {
       displayName = "M230 Chaingun";
-      displayNameShort = "M230 HEI";
+      displayNameShort = "M230 HEDP";
       magazines[] = {"VTX_M230_Chaingun_L_HEI", "VTX_M230_Chaingun_R_HEI"};
       class player: player {
         displayName = "M230 HEI";
@@ -45,7 +45,7 @@ class cfgWeapons {
 	class missiles_DAGR: RocketPods {
     magazines[] += {"VTX_PylonRack_M261_DAGR"};
   };
-    class vtx_chaingun_ap: vtx_chaingun_hei {
+    class vtx_chaingun_ap: vtx_chaingun_hedp {
       displayName = "M230 Chaingun";
       displayNameShort = "M230 AP";
       magazines[] = {"VTX_M230_Chaingun_L_AP", "VTX_M230_Chaingun_R_AP"};
