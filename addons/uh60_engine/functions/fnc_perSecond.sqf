@@ -8,9 +8,8 @@
 #include "defines.hpp"
 params ["_vehicle"];
 
-if (!local _vehicle || vtx_uh60m_simpleStartup) exitWith {};
-
-
+private _lastSimpleStart = missionNamespace getVariable ["vtx_uh60_lastSimpleStart", 0];
+if (!local _vehicle || vtx_uh60m_simpleStartup || time < vtx_uh60_lastSimpleStart + 10) exitWith {};
 
 private _eng1Powered = _vehicle getVariable ["ENG1_PWR",0] > 0;
 private _eng2Powered = _vehicle getVariable ["ENG2_PWR",0] > 0;
