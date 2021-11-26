@@ -27,13 +27,13 @@ class cfgMagazines {
     ammo = "VTX_Hellfire_AGM114N";
     pylonWeapon = "vtx_hellfire_launcher_N";
   };
-  class VTX_M230_Chaingun_L_HEI: VehicleMagazine {
+  class VTX_M230_Chaingun_L_HEDP: VehicleMagazine {
     scope = 2;
     ammo = "vtx_300Rnd_30mm_shells_hedp";
-    displayname = "30x113 mm HEI";
-    displayNameShort = "30x113 HEI";
+    displayname = "30x113 mm HEDP";
+    displayNameShort = "30x113 HEDP";
     initspeed = 805;
-    pylonWeapon = "vtx_chaingun_hei";
+    pylonWeapon = "vtx_chaingun_hedp";
     muzzlePos = "muzzlePos";
     muzzleEnd = "muzzleEnd";
     weight = 180;
@@ -44,13 +44,13 @@ class cfgMagazines {
     hardpoints[] =    {"VTX_ST_L"};
     model = \z\vtx\addons\uh60_weapons\Data\M230\M230_L.p3d;
   };
-  class VTX_M230_Chaingun_R_HEI: VehicleMagazine {
+  class VTX_M230_Chaingun_R_HEDP: VehicleMagazine {
     scope = 2;
     ammo = "vtx_300Rnd_30mm_shells_hedp";
-    displayname = "30x113 mm HEI";
-    displayNameShort = "30x113 HEI";
+    displayname = "30x113 mm HEDP";
+    displayNameShort = "30x113 HEDP";
     initspeed = 805;
-    pylonWeapon = "vtx_chaingun_hei";
+    pylonWeapon = "vtx_chaingun_hedp";
     muzzlePos = "muzzlePos";
     muzzleEnd = "muzzleEnd";
     weight = 180;
@@ -80,14 +80,14 @@ class cfgMagazines {
     weight = 300;
     model = QPATHTOF(fza_pod_m261.p3d);
   };
-  class VTX_M230_Chaingun_L_AP: VTX_M230_Chaingun_L_HEI {
+  class VTX_M230_Chaingun_L_AP: VTX_M230_Chaingun_L_HEDP {
     scope = 2;
     ammo = "vtx_300Rnd_30mm_shells_ap";
     displayname = "30x113 mm AP";
     displayNameShort = "30x113 AP";
     pylonWeapon = "vtx_chaingun_ap";
   };
-  class VTX_M230_Chaingun_R_AP: VTX_M230_Chaingun_R_HEI {
+  class VTX_M230_Chaingun_R_AP: VTX_M230_Chaingun_R_HEDP {
     scope = 2;
     ammo = "vtx_300Rnd_30mm_shells_ap";
     displayname = "30x113 mm AP";
