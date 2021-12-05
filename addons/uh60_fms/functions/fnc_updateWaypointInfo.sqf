@@ -12,9 +12,9 @@ private _wayPoint = [group player, currentWaypoint group player];
 private _position = waypointPosition _wayPoint;
 if ((count customWaypointPosition) > 0) then {
     _position = customWaypointPosition;
-    _vehicle setUserMFDText [7, "MAP MARK"];
+    [_vehicle, 7, "MAP MARK"] call vtx_uh60_mfd_fnc_setUserText;
 } else {
-    _vehicle setUserMFDText [7, waypointDescription _wayPoint];
+    [_vehicle, 7, waypointDescription _wayPoint] call vtx_uh60_mfd_fnc_setUserText;
 };
 
 private _centerMode = _vehicle getVariable ["vtx_uh60_mfd_tac_center_mode", 0];
@@ -96,5 +96,5 @@ if (speed _vehicle > 2) then {
     private _tofMinutes = floor (_tofSecondsTotal / 60 % 60);
     private _tofSeconds = round (_tofSecondsTotal % 60);
     private _tofStr = format["%1:%2:%3",_tofHours, _tofMinutes, _tofSeconds];
-    _vehicle setUserMFDText [8, _tofStr];
+    [_vehicle, 8, _tofStr] call vtx_uh60_mfd_fnc_setUserText;
 };
