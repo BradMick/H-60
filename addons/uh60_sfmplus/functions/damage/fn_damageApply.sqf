@@ -27,7 +27,16 @@ private _dmgPerSec     = 1 / _timeToMaxDmg;
 private _pctNR         = (_heli getVariable "vtx_uh60_sfmplus_engPctNP" select 0) max (_heli getVariable "vtx_uh60_sfmplus_engPctNP" select 1);
 private _eng1PctTQ     = _heli getVariable "vtx_uh60_sfmplus_engPctTQ" select 0;
 private _eng2PctTQ     = _heli getVariable "vtx_uh60_sfmplus_engPctTQ" select 1;
-private _engPctTQ      = _eng1PctTQ max _eng2PctTQ;
+private _engPctTQ      = 0.0;
+
+if (!difficultyEnabledRTD) then {
+    _engPctTQ = _eng1PctTQ max _eng2PctTQ;
+} else {
+    private _tqScalar = 481;
+    private _engTq    = enginesTorqueRTD _vehicle;
+
+    _engPctTQ = ((_engTq # 0) / _tqScalar) max ((_engTq # 1) / _tqScalar);
+};
 private _totRtrDmg     = _heli getHitPointDamage _rtrDmgHitName;
 private _isSingleEng   = _heli getVariable "vtx_uh60_sfmplus_isSingleEng";
 private _dmgTimerCont  = _heli getVariable "vtx_uh60_sfmplus_dmgTimerCont";
